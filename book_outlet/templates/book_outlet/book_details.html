@@ -1,0 +1,19 @@
+{% extends 'book_outlet/base_template.html' %}
+{%load static%}
+
+{%block page_title%}
+{{book.title}} Book
+{%endblock%}
+
+{%block body_content%}
+
+<h2>{{book.title}}</h2>
+<h3>Rating : ({{book.rating}})</h3>
+<h3>{{book.author}}</h3>
+{%if book.is_bestseller%}
+<h3>the book is a best seller</h3>
+{%else %}
+<h3>the book is not a best seller</h3>
+{% endif%}
+
+{%endblock%}
